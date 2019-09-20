@@ -1,0 +1,177 @@
+package sequential;
+
+/**
+ *
+ * @author Nacha
+ */
+import java.util.Scanner;
+
+public class Sequential {
+    public static void main(String[] args) {
+        tugas1();
+        tugas2();
+        tugas3();
+        tugas4();
+        praktikum1();
+        praktikum2();
+        praktikum3();
+        praktikum4();
+    }
+
+    public static void tugas1() {
+        String cari;
+        boolean found = false;
+        String[] data = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        System.out.print("Angka berapa yang ingin anda cari antara 1-10 : \n");
+        Scanner scan = new Scanner(System.in);
+        cari = scan.nextLine();
+        for (int i = 0; i < data.length; i++) {
+            String string = data[i];
+            if (cari.equals(data[i])) {
+                found = true;
+                break;
+            }
+        }
+        if (found == true) {
+            System.out.println("Data ditemukan");
+        } else {
+            System.out.println("Data tidak ditemukan");
+        }
+    }
+
+    public static void tugas2() {
+        int cari;
+        boolean found = false;
+        int[] data = new int[]{11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Angka berapa yang ingin anda cari antara 11-20 : \n");
+        cari = scan.nextInt();
+        for (int i = 0; i < data.length; i++) {
+            if (cari == data[i]) {
+                found = true;
+                System.out.print("Data yang anda cari ada pada indeks ke : " + i);
+            }
+        }
+        if (found != true) {
+            System.out.println("Data tidak ditemukan");
+        }
+    }
+
+    public static void tugas3() {
+        int max = 0;
+        int[] data = new int[]{2, 6, 45, 81, 12};
+        System.out.print("Data pada array adalah : \n");
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i] + "\t");
+            if (data[i] > max) {
+                max = data[i];
+            }
+        }
+        System.out.println("\n Data terbesar dari Array adalah : " + max);
+    }
+
+    public static void tugas4() {
+        Scanner input = new Scanner(System.in);
+        String find;
+        System.out.println("Masukkan sebuah kalimat :");
+        find = input.nextLine();
+        int a = 0;
+        for (int i = 0; i < find.length(); i++) {
+            if (find.charAt(i) == 'e') {
+                a++;
+            }
+        }
+        System.out.println("Jumlah huruf e pada kalimat tersebut adalah : " + a);
+    }
+
+    public static void praktikum1() {
+        int cari;
+        boolean found = false;
+        int[] data = new int[]{11, 12, 16, 11, 18, 16, 12, 14, 15, 17, 17, 15, 19, 14, 13, 16, 13};
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Angka berapa yang ingin anda cari banyaknya :");
+        cari = scan.nextInt();
+        System.out.print("Data array adalah : \n");
+        int a = 0;
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(data[i] + "\t");
+            }
+        for (int i = 0; i < data.length; i++) {
+            if (cari == data[i]) {
+                a++;
+                found = true;
+            }
+        }
+        if (found == true){
+            System.out.println("Data ada : " + a);
+        }else {
+            System.out.println("Data tidak ditemukan");
+        }
+    }
+
+    public static void praktikum2() {
+        int bilangan[] = new int[]{86, 72, 71, 98, 65, 87};
+        double ratarata = 0;
+        System.out.println("Data pada Array : \n");
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.print(bilangan[i] + "\t");
+            ratarata += bilangan[i];
+        }
+        ratarata /= bilangan.length;
+        System.out.println("\n");
+        System.out.println("Nilai rata-rata : " + ratarata);
+        for (int i = 0; i < bilangan.length; i++) {
+            if (bilangan[i] > ratarata) {
+                int x = bilangan[i];
+                System.out.println("Nilai diatas rata - rata : " + x);
+            }
+        }
+    }
+
+    public static void praktikum3() {
+        int bilangan[] = new int[]{36, 52, 21, 56, 65, 12};
+        int cari = 3;
+        System.out.println("Data pada array : \n");
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.println(bilangan[i] + "\t");
+        }
+        for (int i = 0; i < bilangan.length; i++) {
+            if (bilangan[i] % 3 == 0) {
+                int x = bilangan[i];
+                System.out.println("Nilai yang berkelipatan 3 adalah : " + x);
+            }
+        }
+    }
+
+    public static void praktikum4() {
+        Scanner input = new Scanner(System.in);
+        String find;
+        System.out.println("Masukkan sebuah kalimat : ");
+        find = input.nextLine();
+        int a = 0, b = 0, c = 0, d = 0, e = 0;
+        for (int i = 0; i < find.length(); i++) {
+            if (find.charAt(i) == 'a') {
+                a++;
+            }
+            if (find.charAt(i) == 'i') {
+                b++;
+            }
+            if (find.charAt(i) == 'u') {
+                c++;
+            }
+            if (find.charAt(i) == 'e') {
+                d++;
+            }
+            if (find.charAt(i) == 'o') {
+                e++;
+            }
+        }
+        int y = a+b+c+d+e;
+        System.out.println("Jumlah huruf a pada kalimat diatas adalah : " + a);
+        System.out.println("Jumlah huruf i pada kalimat diatas adalah : " + b);
+        System.out.println("Jumlah huruf u pada kalimat diatas adalah : " + c);
+        System.out.println("Jumlah huruf e pada kalimat diatas adalah : " + d);
+        System.out.println("Jumlah huruf o pada kalimat diatas adalah : " + e);
+        System.out.println("Jumlah huruf vokal pada kalimat diatas adalah : " + y);
+    }
+}
