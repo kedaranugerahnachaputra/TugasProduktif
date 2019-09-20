@@ -22,7 +22,7 @@ public class Sequential {
         String cari;
         boolean found = false;
         String[] data = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
-        System.out.print("Angka berapa yang ingin anda cari antara 1-10 : \n");
+        System.out.print("Angka berapa yang ingin anda cari antara 1-10 : ");
         Scanner scan = new Scanner(System.in);
         cari = scan.nextLine();
         for (int i = 0; i < data.length; i++) {
@@ -44,7 +44,7 @@ public class Sequential {
         boolean found = false;
         int[] data = new int[]{11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
         Scanner scan = new Scanner(System.in);
-        System.out.println("Angka berapa yang ingin anda cari antara 11-20 : \n");
+        System.out.println("Angka berapa yang ingin anda cari antara 11-20 : ");
         cari = scan.nextInt();
         for (int i = 0; i < data.length; i++) {
             if (cari == data[i]) {
